@@ -375,9 +375,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001297":
-  version: 1.0.30001298
-  resolution: "caniuse-lite@npm:1.0.30001298"
-  checksum: 43566732d1b8746e3dfae57f558471c701b26b2c166fb9fc53ad750d83128b2eb680a5e08233717e64055779b408c72d3b2cfad6d4ae33a3e647a11dc1c0d515
+  version: 1.0.30001580
+  resolution: "caniuse-lite@npm:1.0.30001580"
+  checksum: 8d287d1e2a64348365f55562457b52afc8c5e0e8ddf040e18e53395ca165241a697205611dc209dace5c7f7d1d3ee8d566672cce6f9668d658d7930b7a200875
   languageName: node
   linkType: hard
 
@@ -1166,7 +1166,6 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    node-css-mqpacker: "hail2u/node-css-mqpacker#v9.0.0"
     postcss: ^8.4.5
     postcss-import: ^14.0.2
     postcss-nesting: ^10.1.1
@@ -2033,19 +2032,6 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: 52ea6ff01a882766ceec74a0752c0cf9571fa72559a7a3e8969779fa5ae113a2d63cb54dd267fa83a533ab2b7617131d4a6996114701f4ca27246d2513b0e5a5
-  languageName: node
-  linkType: hard
-
-"node-css-mqpacker@hail2u/node-css-mqpacker#v9.0.0":
-  version: 9.0.0
-  resolution: "node-css-mqpacker@https://github.com/hail2u/node-css-mqpacker.git#commit=b5c2b84716c5f6ab6ef2018dc4024c9710325a3a"
-  dependencies:
-    minimist: ^1.2.5
-  peerDependencies:
-    postcss: ^8.3.5
-  bin:
-    mqpacker: ./bin/mqpacker.js
-  checksum: 5ae9eb5901cf945cb716ae153d42a0589a6a0b4dc49622f39a522009974c4dd700815dade982cc0659ea5f285868e69eaf51260bb1254e91c75a9dc22c39bbff
   languageName: node
   linkType: hard
 
