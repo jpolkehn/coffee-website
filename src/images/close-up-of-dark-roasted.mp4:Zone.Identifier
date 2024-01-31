@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=about:client
+HostUrl=https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d92ce2dd-35c1-4db0-bf59-6e8f6b2fa23c/close-up-of-dark-roasted.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210119T150319Z&X-Amz-Expires=86400&X-Amz-Signature=fabb5cc4434e1a55be719b996967fae1d685435370a8198d1cea6cd079b893ea&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22close-up-of-dark-roasted.mp4%22

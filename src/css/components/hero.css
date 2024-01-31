@@ -1,17 +1,48 @@
-.hero {
-  color: red;
-  position: relative;
+.hero-banner {
+  
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.hero-title {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%,-50%);
-  z-index: 10;
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero-img {
-  filter: grayscale(50%);
-  z-index: 5;
+.hero-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-banner button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-banner button:hover {
+  background-color: grey;
+}
+
+.logo-box {
+position: absolute;
+margin-top: 40px;
+margin-left: 40px;
+
+}
+
+.logo {
+height: 35px;
+
 }

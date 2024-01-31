@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    height: 50vh;
+    margin: 150px 150px 0 150px
+}
+
+#left-container1, #right-container1 {
+    flex: 1;
+}
+
+#left-container1 {
+   
+    text-align:left;
+    align-items: center;
+    justify-content: flex-end;
+   
+    box-sizing: border-box;
+    
+}
+
+#right-container1 img {
+    width: 80%;
+    margin-top:0;
+    padding-top: 0;
+   
+}
+#right-container1 {
+    background-color: #fff;
+            padding: 20px;
+            
+            
+            justify-content: center;
+           
+}
+
+#left-container2, #right-container2 {
+    flex: 1;
+}
+
+#right-container2 {
+   
+    text-align:left;
+    align-items: center;
+    justify-content: flex-end;
+    
+    box-sizing: border-box;
+    
+}
+
+#left-container2 img {
+    width: 80%;
+    margin-top:0;
+    padding-top: 0;
+
+   
+}
+#left-container2 {
+    background-color: #fff;
+    padding: 20px;
+    justify-content: center;
+}
+
+.center-wrapper {
+  margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures that the wrapper is at least the height of the viewport */
+    background: #ffffff; /* Assuming you have a dark background like in the image */
+  }
+
+  .product-container {
+    width: 773px;
+    height: 665px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Padding is included in the width and height */
+  }
+
+  .product-image {
+    /* Adjust the size as necessary */
+   
+    height: auto;
+    
+    
+  }
+
+  .icon-text-section {
+    width: 70%; /* Adjust the width as necessary */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* This will space out the icons evenly */
+    
+  }
+
+  .icon-with-text {
+   
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    
+    
+  }
+
+  .icon {
+    /* Add your icon styles here */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+  .text {
+   
+    text-align:left;
+  }
+
+  .shop-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .heading-2 {
+    text-align: center;
+    margin-top:3rem;
+    
+  }
