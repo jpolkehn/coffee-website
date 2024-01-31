@@ -1,0 +1,117 @@
+.section--contents__heading {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+  .section--contents__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .section--contents__image {
+    margin-bottom: 5rem;
+    width: 50vw;
+  }
+  
+  .section--contents__image img {
+    width: 100%;
+  }
+  
+  .section--contents__text-and-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .section--contents__descriptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section--contents__descriptions .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .section--contents__button {
+    -ms-flex-preferred-size: content;
+    flex-basis: content;
+  }
+
+  .section--origins {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 50vh;
+    min-height: 250px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+      ),
+      url(/images/FEND-Coffee-bags-2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(/images/FEND-Coffee-bags-2.jpg);
+    background-position: 50%;
+    background-size: cover;
+  }
+  
+  .section--origins a,
+  .section--origins h3,
+  .section--origins p {
+    text-align: center;
+    color: #fff;
+    margin-top: 3.5rem;
+  }
+  
+  .section--origins .learn-more-link:after {
+    background-color: #fff;
+  }
+  .index section {
+    padding: 6rem 2.4rem;
+  }

@@ -1,0 +1,14 @@
+.map {
+    padding: 0;
+  }
+  
+  .map__heading {
+    margin: 3.5rem 2.4rem;
+  }
+  
+  .map__frame {
+    display: block;
+    border: none;
+    height: 35vh;
+    width: 100%;
+  }

@@ -1,0 +1,39 @@
+.impressum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 6rem 2.4rem;
+  }
+  
+  .impressum h2 {
+    margin-top: 2rem;
+  }
+  
+  .impressum__text {
+    width: 100%;
+  }
+  
+  .impressum__address-heading {
+    margin-bottom: 1rem;
+  }
+  
+  .impressum address {
+    font-style: normal;
+  }
+  
+  .impressum address,
+  .impressum p {
+    margin-bottom: 2rem;
+  }
+  
+  .impressum ul {
+    list-style-position: inside;
+    list-style-type: "- ";
+  }
+  
+  .impressum ul li {
+    margin-bottom: 1.5rem;
+  }

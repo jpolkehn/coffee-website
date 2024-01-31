@@ -1,0 +1,23 @@
+.origins > * {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 6rem;
+  }
+  
+  .origins .text-and-images__cell--image,
+  .origins > :first-child {
+    padding-top: 6rem;
+  }
+  
+  .origins .text-and-images__cell--text {
+    margin: 0;
+    padding-top: 0;
+  }
+  
+  .origins .text-and-images__row--pic-left .text-and-images__cell--image {
+    padding-left: 50px;
+  }
+  
+  .origins .text-and-images__row--pic-right .text-and-images__cell--image {
+    padding-right: 50px;
+  }

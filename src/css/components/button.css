@@ -1,14 +1,92 @@
 .button {
-    text-align: center;
-    text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 50px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
-.button a {
-    text-decoration: none;
-    color:white;
-}
 
-.button a:visited { 
-    text-decoration: none; 
-    color: white; 
+
+.button:hover {
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+  
+  .button--centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button--dark {
+    -webkit-box-shadow: inset 0 0 0 2px #1a1a1a;
+    box-shadow: inset 0 0 0 2px #1a1a1a;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .button--dark:hover {
+    background-color: #3a3734;
+  }
+  
+  .button--dark:active,
+  .button--dark:hover {
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 1px #1a1a1a;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 1px #1a1a1a;
+  }
+  
+  .button--dark:active {
+    background-color: #d7be9d;
+  }
+  
+  .button--light-border {
+    -webkit-box-shadow: inset 0 0 0 3px #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+    background-size: 200% 100%;
+    background-position: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #000),
+      color-stop(50%, transparent)
+    );
+    background-image: linear-gradient(90deg, #000 50%, transparent 0);
+    -webkit-transition: background-color 0.2s ease-out,
+      background-position 0.2s ease-out;
+    transition: background-color 0.2s ease-out, background-position 0.2s ease-out;
+  }
+  
+  .button--light-border:hover {
+    background-position: 0;
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 3px #000;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 3px #000;
+  }
+  
+  .button--light-border:active {
+    background-image: none;
+    background-color: #d7be9d;
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 1px #000;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), inset 0 0 0 1px #000;
+  }
+  
+  .icon-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }

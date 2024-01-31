@@ -1,0 +1,222 @@
+
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  padding: 1rem 6.5%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(50%, #fff),
+    color-stop(50%, transparent));
+  background-image: linear-gradient(180deg, #fff 50%, transparent 0);
+  background-size: 100% 200%;
+  background-position: bottom;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nav__logo img {
+  display: block;
+  color: white;
+}
+
+.nav .menu-link {
+  font-size: 1.8rem;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav .menu-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #000;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav .active .menu-link:after,
+.nav .menu-link:active:after,
+.nav .menu-link:hover:after {
+  width: 100%;
+}
+
+.nav .menu-button {
+  border: none;
+  background-color: transparent;
+}
+
+.nav .mobile-menu-button {
+  width: 3rem;
+}
+
+.nav--transparent .menu-link,
+.nav--transparent p {
+  color: #fff;
+}
+
+.nav--transparent .menu-link:after,
+.nav--transparent p:after {
+  background-color: #fff;
+}
+
+.nav--transparent .icon {
+  -webkit-filter: brightness(1000);
+  filter: brightness(1000);
+}
+
+.nav--transparent .cart__product-count--nonempty {
+  background-color: #fff;
+}
+
+.nav--transparent .cart__product-count--nonempty .cart__product-count {
+  color: #000;
+}
+
+.nav--solid {
+  background-position: top;
+}
+
+.nav--solid .menu-link {
+  color: #000;
+}
+
+.nav--solid .icon {
+  -webkit-filter: brightness(0);
+  filter: brightness(0);
+}
+
+.nav--solid .cart__product-count--nonempty {
+  background-color: #006d7e;
+}
+
+.nav--regular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav--regular .logo-svg {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.nav--regular .nav__list {
+  display: none;
+}
+
+.nav--regular .cart-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.nav--regular .cart-icon img {
+  padding-bottom: 5px;
+}
+
+.nav--regular .cart-icon:hover .cart__product-count--nonempty {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.nav--regular .cart-icon .cart__product-count-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2px 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: -1.2rem;
+  margin-top: -1rem;
+  z-index: 2;
+}
+
+.nav--regular .cart-icon .cart__product-count--empty {
+  display: none;
+}
+
+.nav--regular .cart-icon .cart__product-count--nonempty {
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nav--overlay {
+  background-color: black;
+}
+
+.nav--overlay .nav__list {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  -webkit-transform: translateY(max(-50%, -50vh));
+  transform: translateY(max(-50%, -50vh));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 8rem 0;
+}
+
+.nav--overlay .nav__list .menu-link {
+  font-weight: 900;
+  line-height: 1.1;
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+.nav--overlay .nav__list .menu-link:after {
+  background-color: #fff;
+  height: 3px;
+}
+
+.nav__list {
+  list-style-type: none;
+}
+
+.nav__list .menu-link {
+  text-decoration: none;
+}

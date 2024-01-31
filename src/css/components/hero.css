@@ -1,48 +1,67 @@
-.hero-banner {
-  
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
+.header--image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 300px;
+  background-position: 50%;
+  background-size: cover;
 }
 
-.hero-banner h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.header--home {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgba(0, 0, 0, 0.3))
+    ),
+    url(/images/FEND-Coffee-latte-art-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/FEND-Coffee-latte-art-3.jpg);
 }
 
-.hero-banner h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.header--home .header__shop-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.hero-banner button {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: white;
-  background-color: black;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.header--cafe {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgba(0, 0, 0, 0.3))
+    ),
+    url(/images/FEND-Coffee-shop.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/FEND-Coffee-shop.jpg);
 }
 
-.hero-banner button:hover {
-  background-color: grey;
-}
-
-.logo-box {
-position: absolute;
-margin-top: 40px;
-margin-left: 40px;
-
-}
-
-.logo {
-height: 35px;
-
+.header--origins {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgba(0, 0, 0, 0.3))
+    ),
+    url(/images/FEND-Coffee-beans-hand-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/FEND-Coffee-beans-hand-2.jpg);
 }

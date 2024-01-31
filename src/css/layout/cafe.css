@@ -1,0 +1,45 @@
+.cafe > * {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 6rem;
+  }
+  
+  .cafe > :first-child {
+    padding-top: 6rem;
+  }
+  
+  .cafe .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    padding-top: 0;
+    width: 100%;
+  }
+  
+  .cafe .gallery__block {
+    width: 50%;
+  }
+  
+  .cafe .gallery__block,
+  .cafe .gallery__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cafe .gallery__column,
+  .cafe .gallery__column img {
+    width: 100%;
+  }
+  
