@@ -1,10 +1,5 @@
 
 @import "base/base.css";
-
-@import "layout/footer.css";
-@import "layout/navigation.css";
-@import "layout/overlay.css";
-@import "layout/text.css";
 @import "components/hero.css";
 @import "components/container.css";
 @import "components/button.css";
@@ -14,6 +9,10 @@
 @import "components/select.css";
 @import "components/slider.css";
 @import "components/video.css";
+@import "layout/footer.css";
+@import "layout/navigation.css";
+@import "layout/overlay.css";
+@import "layout/text.css";
 @import "layout/cafe.css";
 @import "layout/cart.css";
 @import "layout/impressum.css";
