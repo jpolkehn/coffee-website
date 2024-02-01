@@ -14,7 +14,7 @@
 }
 
 .header--home {
-  background-image: url("/home/poldie/DEV/FEND/src/images/FEND-Coffee-latte-art-3.jpg");
+  background-image: url("/images/FEND-Coffee-latte-art-3.jpg");
   
 }
 
@@ -24,10 +24,10 @@
 }
 
 .header--cafe {
-    background-image: url("/home/poldie/DEV/FEND/src/images/FEND-Coffee-shop.jpg");
+    background-image: url("/images/FEND-Coffee-shop.jpg");
 }
 
 .header.orgins {
 
-    background-image: url("/home/poldie/DEV/FEND/src/images/FEND-Coffee-beans-hand-2.jpg");
+    background-image: url("/images/FEND-Coffee-beans-hand-2.jpg");
 }

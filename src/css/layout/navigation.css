@@ -23,6 +23,7 @@
   background-position: bottom;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  
 }
 
 .nav__logo img {
@@ -58,6 +59,7 @@
 .nav .menu-button {
   border: none;
   background-color: transparent;
+
 }
 
 .nav .mobile-menu-button {
@@ -120,6 +122,7 @@
 .nav--regular .logo-svg {
   height: 3.5rem;
   width: 3.5rem;
+ 
 }
 
 .nav--regular .nav__list {
@@ -173,7 +176,7 @@
 }
 
 .nav--regular .cart-icon .cart__product-count--nonempty {
-  border-radius: 50%;
+  border-radius: 25px;
   text-align: center;
   vertical-align: middle;
   -webkit-transition: all 0.3s ease-out;
@@ -220,3 +223,4 @@
 .nav__list .menu-link {
   text-decoration: none;
 }
+
