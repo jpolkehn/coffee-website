@@ -4,9 +4,17 @@
     padding-bottom: 6rem;
   }
 
-  .orgins-overview {
-    text-align: center;
-  }
+ .origins__overview {
+  width: 612px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+
+ }
   
   .origins .text-and-images__cell--image,
   .origins > :first-child {
@@ -19,9 +27,11 @@
   }
   
   .origins .text-and-images__row--pic-left .text-and-images__cell--image {
+    margin-top: 100px;
     padding-left: 50px;
   }
   
   .origins .text-and-images__row--pic-right .text-and-images__cell--image {
+    margin-top: 70px;
     padding-right: 50px;
   }
