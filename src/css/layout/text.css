@@ -38,6 +38,8 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    text-align: left;
+    padding: 0 0 0 20px;
   }
   
   .text-and-images__cell,
@@ -48,6 +50,9 @@
   
   .text-and-images__cell--text {
     margin-bottom: 4rem;
+    
+    
+
   }
   
   .text-and-images__subrow {
@@ -61,11 +66,11 @@
   }
   
   .text-and-images__subcell:not(:first-child) {
-    margin-left: 0.8rem;
+    margin-left: 0.8em;
   }
   
   .text-and-images__subcell:not(:last-child) {
-    margin-right: 0.8rem;
+    margin-right: 0.8em;
   }
   
   .text-and-images__text:not(:last-child) {

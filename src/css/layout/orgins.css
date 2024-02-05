@@ -3,6 +3,10 @@
     padding-right: 2.4rem;
     padding-bottom: 6rem;
   }
+
+  .orgins-overview {
+    text-align: center;
+  }
   
   .origins .text-and-images__cell--image,
   .origins > :first-child {
@@ -10,7 +14,7 @@
   }
   
   .origins .text-and-images__cell--text {
-    margin: 0;
+    margin: 40px;
     padding-top: 0;
   }
   

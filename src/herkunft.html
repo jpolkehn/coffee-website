@@ -1,11 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Herkunft | Rustica Kaffeerösterei</title>
+    <link rel="icon shortcut" href="/favicon.ico"><link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
 </head>
-<body>
-    {{> footer }}
-</body>
-</html>
+
+<body> 
+    
+    <header class="header header--image header--origins"> 
+        <nav class="nav nav--transparent" id="navigation"> 
+            <div class="nav--regular"> 
+                <div class="nav__logo"> 
+                    <a aria-describedby="logo-link-description" href="/">
+                        <img src="/Logo.svg" alt="Rustica Logo" class="icon logo-svg"></a>
+                     </div> 
+                     <ul class="nav__list">  
+                        <li class="menu-item"> <a class="menu-link" href="/cafe">das Café</a> </li> 
+                        <li aria-current="page" class="active menu-item"> <a class="menu-link" href="/origins">Herkunft</a> </li> 
+                        <li class="menu-item"> <a class="menu-link" href="/shop">Shop</a> </li> 
+                        <li class="menu-item"> <a class="menu-link" href="/contact">Kontakt</a> </li> 
+                    </ul> 
+                    <button aria-label="Warenkorb-Knopf" aria-describedby="cart-button-description" class="cart-button cart-icon icon-button open-cart-button"> 
+                        <img src="/images/icons/Warenkorb.svg" alt="Warenkorb Icon" class="cart-svg icon">
+                         <div class="cart__product-count-container cart__product-count--empty"> 
+                            <p class="cart__product-count">0</p> 
+                        </div> 
+                    </button> 
+                    <button aria-label="Menüknopf" aria-describedby="menu-button-description" class="menu-button mobile-menu-button" id="mobile-menu-button"> 
+                        <img src="/Burger Menu.svg" alt="Menü öffnen" class="burger-menu-svg icon"> 
+                    </button> 
+                    <div id="menu-button-description" class="u-hidden"> 
+                        <p>Dieser Knopf öffnet ein modales Navigationsmenü.</p> 
+                    </div> 
+                    <div id="logo-link-description" class="u-hidden">
+                         <p>Dieser Link führt zur Startseite.</p> 
+                        </div> 
+                        </div> 
+                        <div class="nav--overlay overlay overlay--sliding" role="dialog" aria-label="Menü" aria-modal="true" aria-hidden="true"> 
+                            <button aria-label="Menü schließen" class="close-menu-button menu-button overlay-close-button u-hidden" id="mobile-menu-close-button" tabindex="-1"> 
+                                <img src="/images/icons/Burger Menu close.svg" alt="Menü schließen" class="burger-menu-svg--close"> 
+                            </button> 
+                            <ul class="nav__list">  
+                                <li class="menu-item"> <a class="menu-link" href="/cafe" tabindex="-1">das Café</a> 
+                                </li> 
+                                <li aria-current="page" class="active menu-item"> <a class="menu-link" href="/origins" tabindex="-1">Herkunft</a> </li> 
+                                <li class="menu-item"> <a class="menu-link" href="/shop" tabindex="-1">Shop</a> </li> <li class="menu-item"> <a class="menu-link" href="/contact" tabindex="-1">Kontakt</a> 
+                                </li> 
+                            </ul> 
+                        </div> 
+                    </nav> 
+                    <div class="cart cart-overlay overlay overlay--sliding" role="dialog" aria-label=
+                            "Warenkorb" aria-modal="true" aria-hidden="true"> <button aria-label="Warenkorb schließen" class="cart-button close-cart-button icon-button overlay-close-button u-hidden" tabindex="-1"> 
+                                <img src="/images/icons/Burger Menu close.svg" alt="Warenkorb schließen" class="burger-menu-svg--close"> </button> 
+                                <div class="cart__content"> 
+                                    <div class="cart__header">
+                                         <div class="cart__title-and-count"> 
+                                            <h3>Warenkorb</h3> <p class="cart__product-count--empty"> 
+                                                <span class="cart__product-count">0</span> 
+                                                <span class="cart__product-count-label">Produkte</span> 
+                                            </p> 
+                                        </div> 
+                                        <p class="add-message"></p>
+                                     </div> 
+                                     <div class="cart__product-list"></div> 
+                                     <div class="cart__billing"> 
+                                        <div class="cart__billing__row--price-sum"> <p>Zwischensumme</p> 
+                                            <p class="price-sum">0,00€</p> </div> 
+                                            <div class="cart__billing__row--shipping"> <p>Versandkosten</p>
+                                                 <p class="shipping">0,00€</p> 
+                                                </div> 
+                                                <hr class="cart__billing__row--divider"> 
+                                                <div class="cart__billing__row--total"> 
+                                                    <p>Gesamtbetrag</p> <p class="total">0,00€
+                                                </p> 
+                                            </div> 
+                                            <a href="#" class="button button--centered button--dark checkout-button" tabindex="-1"> zur Kasse 
+
+                                            </a> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </header> 
+                            <main class="origins"> 
+                                <div class="origins__overview"> 
+                                    <h2 class="text-heading--secondary">Der Ursprung von Rustica</h2> 
+                                    <p> Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben. 
+
+                                    </p> 
+                                </div> 
+                                <div class="origins__video">  
+                                    <div class="simple-video video-container"> 
+
+                                        <video class="video" describedby="video--description"> <source src="/images/close-up-of-dark-roasted.webm" type="video/webm"> <source src="/images/close-up-of-dark-roasted.mp4" type="video/mp4"> Das Video kann nicht angezeigt werden. </video> 
+                                        
+                                        <p class="u-sr-only" id="video--description"> Stummes Video von Kaffeebohnen und Schokolade auf einem rotierenden Tisch 
+
+                                        </p> 
+                                        <div class="video__overlay"> 
+                                            <button class="paused play-button" aria-label="Video abspielen oder pausieren">
+
+                                            </button> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                <div class="text-and-images"> 
+                                    <div class="text-and-images__row text-and-images__row--pic-right"> 
+                                        <div class="text-and-images__cell text-and-images__cell--text">
+                                             <h3 class="text-heading--tertiary">Die Anbaugebiete
+
+                                             </h3> 
+                                             <p class="text-and-images__text"> Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben. 
+
+                                             </p> 
+                                            </div> 
+                                            <div class="text-and-images__cell text-and-images__cell--image"> 
+                                                <img src="/images/FEND-coffee-plant-2.jpg" alt="Kaffeepflanze" class="text-and-images__img"> 
+                                            </div> 
+                                        </div> 
+                                        <div class="text-and-images__row text-and-images__row--pic-left"> 
+                                            <div class="text-and-images__cell text-and-images__cell--text"> 
+                                                <h3 class="text-heading--tertiary">Das Wohl der Kaffeebauern
+
+                                                </h3> 
+                                                <p class="text-and-images__text"> Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.
+                                                     </p> 
+                                                    </div> 
+                                                    <div class="text-and-images__cell text-and-images__cell--image"> <img src="/images/FEND-Coffee-worker.jpg" alt="Kaffeepflanze" class="text-and-images__img"> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+</main> 
+    <footer>  {{> footer2 }}
+
+    </footer> 
+                <script src="/scripts.js"></script> <script src="/simple-video.js"></script> </body>
