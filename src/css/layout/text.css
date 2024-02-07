@@ -35,11 +35,11 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    
     justify-content: center;
     text-align: left;
     padding: 0 0 0 20px;
+    
   }
   
   .text-and-images__cell,
@@ -49,7 +49,15 @@
   }
   
   .text-and-images__cell--text {
-    margin-bottom: 4rem;
+    
+  width: 612px;
+  justify-content: center;
+  
+  /*border: 2px solid black;*/
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 4rem;
+    
     
     
 
