@@ -63,6 +63,8 @@ html {
 body,
 html {
   overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth
 }
 
 body {
@@ -71,7 +73,7 @@ body {
   box-sizing: border-box;
 }
 
-1 {
+h1 {
   font-size: 6.4rem;
 }
 

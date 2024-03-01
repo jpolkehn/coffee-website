@@ -5,14 +5,14 @@
   }
 
  .origins__overview {
-  width: 612px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 70%;
+	margin: 1em auto; 
+	
+	align-items:center;
+	justify-content:center
 
+
+  
 
  }
   
@@ -34,4 +34,10 @@
   .origins .text-and-images__row--pic-right .text-and-images__cell--image {
     margin-top: 70px;
     padding-right: 50px;
+  }
+
+  .video {
+   
+    width: 100%;
+
   }

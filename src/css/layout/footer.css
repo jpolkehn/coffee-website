@@ -65,6 +65,10 @@
   .footer .link-list {
     list-style-type: none;
   }
+
+  .item.item--navlist {
+    order: 1;
+  }
   
   .footer .link-list li a {
     text-decoration: none;

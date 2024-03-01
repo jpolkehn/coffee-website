@@ -44,9 +44,13 @@
   .select-container select option {
     color: #000;
     background-color: #fff;
+    
   }
   
   .select-container select:focus + .select-arrow:after {
     content: "‹";
+    
+ 
   }
+
   

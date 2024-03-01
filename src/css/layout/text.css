@@ -50,16 +50,20 @@
   
   .text-and-images__cell--text {
     
-  width: 612px;
-  justify-content: center;
+  
+    width: 70%;
+    margin: 1em auto; 
+    
+    align-items:center;
+    justify-content:center;
+  
   
   /*border: 2px solid black;*/
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 4rem;
+  
+ 
     
     
-    
+  
 
   }
   
@@ -83,6 +87,8 @@
   
   .text-and-images__text:not(:last-child) {
     margin-bottom: 2rem;
+    
+   
   }
   .site-heading--primary,
 .site-heading--secondary {
