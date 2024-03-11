@@ -15,8 +15,106 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
 <body>
-    <header class="header"> <h1 class="u-sr-only">Kontakt</h1> <nav class="nav nav--solid" id="navigation"> <div class="nav--regular"> <div class="nav__logo"> <a aria-describedby="logo-link-description" href="/"><img src="/Logo.svg" alt="Rustica Logo" class="icon logo-svg"></a> </div> <ul class="nav__list">  <li class="menu-item"> <a class="menu-link" href="/cafe">das Café</a> </li> <li class="menu-item"> <a class="menu-link" href="/origins">Herkunft</a> </li> <li class="menu-item"> <a class="menu-link" href="/shop">Shop</a> </li>  </ul> <button aria-label="Warenkorb-Knopf" aria-describedby="cart-button-description" class="cart-button cart-icon icon-button open-cart-button"> <img src="/images/icons/Warenkorb.svg" alt="Warenkorb Icon" class="cart-svg icon"> <div class="cart__product-count-container cart__product-count--empty"> <p class="cart__product-count">0</p> </div> </button> <button aria-label="Menüknopf" aria-describedby="menu-button-description" class="menu-button mobile-menu-button" id="mobile-menu-button"> <img src="/images/icons/Burger Menu.svg" alt="Menü öffnen" class="burger-menu-svg icon"> </button> <div id="menu-button-description" class="u-hidden"> <p>Dieser Knopf öffnet ein modales Navigationsmenü.</p> </div> <div id="logo-link-description" class="u-hidden"> <p>Dieser Link führt zur Startseite.</p> </div> </div> <div class="nav--overlay overlay overlay--sliding" role="dialog" aria-label="Menü" aria-modal="true" aria-hidden="true"> <button aria-label="Menü schließen" class="close-menu-button menu-button overlay-close-button u-hidden" id="mobile-menu-close-button" tabindex="-1"> <img src="/Burger Menu close.ecb7365f.svg" alt="Menü schließen" class="burger-menu-svg--close"> </button> <ul class="nav__list">  <li class="menu-item"> <a class="menu-link" href="/cafe" tabindex="-1">das Café</a> </li> <li class="menu-item"> <a class="menu-link" href="/origins" tabindex="-1">Herkunft</a> </li> <li class="menu-item"> <a class="menu-link" href="/shop" tabindex="-1">Shop</a> </li> <li aria-current="page" class="active menu-item"> <a class="menu-link" href="/contact" tabindex="-1">Kontakt</a> </li> </ul> </div> </nav> <div class="cart cart-overlay overlay overlay--sliding" role="dialog" aria-label="Warenkorb" aria-modal="true" aria-hidden="true"> <button aria-label="Warenkorb schließen" class="cart-button close-cart-button icon-button overlay-close-button u-hidden" tabindex="-1"> <img src="/Burger Menu close.ecb7365f.svg" alt="Warenkorb schließen" class="burger-menu-svg--close"> </button> <div class="cart__content"> <div class="cart__header"> <div class="cart__title-and-count"> <h3>Warenkorb</h3> <p class="cart__product-count--empty"> <span class="cart__product-count">0</span> <span class="cart__product-count-label">Produkte</span> </p> </div> <p class="add-message"></p> </div> <div class="cart__product-list"></div> <div class="cart__billing"> <div class="cart__billing__row--price-sum"> <p>Zwischensumme</p> <p class="price-sum">0,00€</p> </div> <div class="cart__billing__row--shipping"> <p>Versandkosten</p> <p class="shipping">0,00€</p> </div> <hr class="cart__billing__row--divider"> <div class="cart__billing__row--total"> <p>Gesamtbetrag</p> <p class="total">0,00€</p> </div> <a href="#" class="button button--centered button--dark checkout-button" tabindex="-1"> zur Kasse </a> </div> </div> </div> </header>
-    <main class="contact"> <h2 class="text-heading--secondary"> Du hast Fragen?<br> Schreib uns gern! </h2> <form class="contact-form"> <label for="name">Name*</label> <input type="text" id="name" name="name" placeholder="Name" required=""> <label for="email">E-Mail*</label> <input type="email" id="email" name="email" placeholder="E-Mail" required=""> <label for="tel">Telefonnummer</label> <input type="tel" id="tel" name="tel" placeholder="Telefonnummer">  <div class="select-container"> <select id="reason" name="reason" class="reason-select select" required=""> <option value="" disabled="" selected="" hidden="">Dein Betreff</option> <option value="shipment-question">Fragen zur Lieferung</option> <option value="product-question">Fragen zum Produkt</option> <option value="sales-question">Vertriebsfragen</option> <option value="none">Einfach nur so!</option> </select> <div class="select-arrow"></div> </div> <label for="message">Deine Nachricht</label> <textarea id="message" name="message" rows="6" placeholder="Was hast du auf dem Herzen?"></textarea> <div class="privacy-checkbox"> <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" required=""> <label for="privacy-checkbox">Ich akzeptiere die Datenschutzerklärung</label> </div> <input type="submit" value="abschicken" class="button button--dark"> </form> </main>
+    <header class="header"> 
+      <h1 class="u-sr-only">Kontakt</h1> 
+      <nav class="nav nav--solid" id="navigation"> 
+        <div class="nav--regular"> 
+          <div class="nav__logo"> 
+            <a aria-describedby="logo-link-description" href="/"><img src="/images/icons/Logo.svg" alt="Rustica Logo" class="icon logo-svg"></a> </div> <ul class="nav__list">  <li class="menu-item"> <a class="menu-link" href="/cafe.html">das Café</a> </li> <li class="menu-item"> <a class="menu-link" href="/herkunft.html">Herkunft</a> </li> <li class="menu-item"> <a class="menu-link" href="/shop.html">Shop</a> </li>  </ul> 
+            <button aria-label="Warenkorb-Knopf" aria-describedby="cart-button-description" class="cart-button cart-icon icon-button open-cart-button"> 
+              <img src="/images/icons/Warenkorb.svg" alt="Warenkorb Icon" class="cart-svg icon"> 
+              <div class="cart__product-count-container cart__product-count--empty"> 
+                <p class="cart__product-count">0</p> 
+              </div> 
+            </button> 
+            <button aria-label="Menüknopf" aria-describedby="menu-button-description" class="menu-button mobile-menu-button" id="mobile-menu-button"> 
+              <img src="/images/icons/Burger Menu.svg" alt="Menü öffnen" class="burger-menu-svg icon"> 
+            </button> 
+            <div id="menu-button-description" class="u-hidden"> 
+              <p>Dieser Knopf öffnet ein modales Navigationsmenü.</p> 
+            </div> 
+            <div id="logo-link-description" class="u-hidden"> 
+              <p>Dieser Link führt zur Startseite.</p> 
+            </div> 
+          </div> 
+          <div class="nav--overlay overlay overlay--sliding" role="dialog" aria-label="Menü" aria-modal="true" aria-hidden="true"> 
+            <button aria-label="Menü schließen" class="close-menu-button menu-button overlay-close-button u-hidden" id="mobile-menu-close-button" tabindex="-1"> 
+              <img src="/images/icons/Burger Menu close.svg" 
+              alt="Menü schließen" 
+              class="burger-menu-svg--close"> </button> 
+              <ul class="nav__list">  
+                <li class="menu-item"> 
+                  <a class="menu-link" href="/cafe.html" tabindex="-1">das Café</a> 
+              </li> 
+              <li class="menu-item"> 
+                <a class="menu-link" href="/herkunft.html" tabindex="-1">Herkunft</a> 
+              </li> 
+              <li class="menu-item"> 
+                <a class="menu-link" href="/shop.html" tabindex="-1">Shop</a> 
+              </li> 
+            </ul> 
+          </div> 
+        </nav> 
+        <div class="cart cart-overlay overlay overlay--sliding" role="dialog" aria-label="Warenkorb" aria-modal="true" aria-hidden="true"> 
+          <button aria-label="Warenkorb schließen" 
+          class="cart-button close-cart-button icon-button overlay-close-button u-hidden" tabindex="-1"> 
+          <img src="/images/icons/Burger Menu close.svg" 
+          alt="Warenkorb schließen" class="burger-menu-svg--close"> </button> 
+          <div class="cart__content"> 
+            <div class="cart__header"> <div class="cart__title-and-count"> 
+              <h3>Warenkorb</h3> 
+              <p class="cart__product-count--empty"> 
+                <span class="cart__product-count">0</span>
+                 <span class="cart__product-count-label">Produkte</span> 
+                </p>
+               </div> 
+               <p class="add-message"></p>
+               </div> 
+               <div class="cart__product-list"></div> 
+               <div class="cart__billing"> 
+                <div class="cart__billing__row--price-sum">
+                   <p>Zwischensumme</p> 
+                   <p class="price-sum">0,00€</p>
+                   </div> <div class="cart__billing__row--shipping"> 
+                    <p>Versandkosten</p> 
+                    <p class="shipping">0,00€</p> 
+                  </div>
+                   <hr class="cart__billing__row--divider">
+                    <div class="cart__billing__row--total"> 
+                      <p>Gesamtbetrag</p> 
+                      <p class="total">0,00€</p> 
+                    </div> <a href="#" class="button button--centered button--dark checkout-button" tabindex="-1"> zur Kasse </a> 
+                  </div> 
+                </div> 
+              </div> 
+            </header>
+    <main class="contact"> 
+      <h2 class="text-heading--secondary"> Du hast Fragen?<br> Schreib uns gern! </h2> 
+      <form class="contact-form">
+         <label for="name">Name*</label> 
+         <input type="text" id="name" name="name" placeholder="Name" required=""> 
+         <label for="email">E-Mail*</label> 
+         <input type="email" id="email" name="email" placeholder="E-Mail" required=""> 
+         <label for="tel">Telefonnummer</label> 
+         <input type="tel" id="tel" name="tel" placeholder="Telefonnummer">  
+         <div class="select-container"> 
+          <select id="reason" name="reason" class="reason-select select" required=""> 
+            <option value="" disabled="" selected="" hidden="">Dein Betreff</option> 
+            <option value="shipment-question">Fragen zur Lieferung</option> 
+            <option value="product-question">Fragen zum Produkt</option> 
+            <option value="sales-question">Vertriebsfragen</option> 
+            <option value="none">Einfach nur so!</option> 
+          </select> 
+          <div class="select-arrow"></div> 
+        </div> 
+        <label for="message">Deine Nachricht</label> 
+        <textarea id="message" name="message" rows="6" placeholder="Was hast du auf dem Herzen?"></textarea> 
+        <div class="privacy-checkbox"> 
+          <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" required=""> 
+          <label for="privacy-checkbox">Ich akzeptiere die Datenschutzerklärung</label> 
+        </div> 
+        <input type="submit" value="abschicken" class="button button--dark"> </form> 
+      </main>
 
     {{> footer2 }}
     <script src="/scripts.js"></script>

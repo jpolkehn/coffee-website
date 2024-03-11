@@ -1,7 +1,10 @@
-import myFunction, { multiply } from "./myModule";
+import initNavigation, { handleNavigationScrolling } from "./navigation";
 
-myFunction();
+function handleScrolling() {
+  handleNavigationScrolling();
+}
 
-const result = multiply(2, 5);
-
-console.log(result);
+// Set up event handlers
+window.onscroll = handleScrolling;
+// Activate the functionality of the mobile menu button
+initNavigation();

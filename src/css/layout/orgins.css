@@ -5,16 +5,10 @@
   }
 
  .origins__overview {
-  width: 70%;
-	margin: 1em auto; 
+ 
+	margin: 2em 20em 2em 20em; 
 	
-	align-items:center;
-	justify-content:center
-
-
-  
-
- }
+}
   
   .origins .text-and-images__cell--image,
   .origins > :first-child {

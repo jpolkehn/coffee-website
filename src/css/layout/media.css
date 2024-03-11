@@ -15,8 +15,11 @@
     font-size: 3.6rem;
   }
  
- 
-  
+ .origins__overview {
+
+     margin: 1em auto;
+
+}
 
   .product-display .product-group {
     display: grid;
@@ -67,6 +70,12 @@
 
   .nav--regular .cart-icon img {
     padding-bottom: 0;
+  }
+
+  .origins__overview {
+
+      margin: 1em auto;
+
   }
 }
 
@@ -188,6 +197,12 @@
 
   .origins .text-and-images__cell--image,.origins>:first-child {
       padding-top: 8rem
+  }
+
+  .origins__overview {
+
+      margin: 1em auto;
+
   }
 
   .product-details .product-display,.product-details .product-info {
