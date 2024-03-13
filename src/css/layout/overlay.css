@@ -17,6 +17,7 @@
 .overlay-open,
 .overlay-open .overlay {
   left: 0;
+  
 }
 
 .overlay-close-button {
