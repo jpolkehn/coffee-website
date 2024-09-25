@@ -1,0 +1,81 @@
+.button {
+  display: flex;
+  align-items: center;
+
+  border-radius: 5px;
+  border: none;
+  width: fit-content;
+  padding: 15px 50px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  // Should be overriden by later classes, so add the button class before
+  // classes setting a background.
+  background-color: transparent;
+
+  transition: background-color 0.3s ease-out;
+
+  &:hover {
+    box-shadow: $button-hover-shadow;
+  }
+
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--dark {
+    //border: 2px solid $color-anthracite;
+    box-shadow: $inner-border 2px $color-anthracite;
+
+    background-color: $color-anthracite;
+
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-anthracite-light;
+      box-shadow: $button-hover-shadow, $inner-border 1px $color-anthracite;
+    }
+
+    &:active {
+      background-color: $color-kraft-paper;
+      box-shadow: $button-hover-shadow, $inner-border 1px $color-anthracite;
+    }
+  }
+
+  &--light-border {
+    box-shadow: $inner-border 3px $color-white;
+
+    background-size: 200% 100%;
+    background-position: right;
+    // Move this to :hover styles to have the animation only when starting to hover.
+    background-image: linear-gradient(
+      to right,
+      $color-black 50%,
+      transparent 50%
+    );
+
+    transition: background-color 0.2s ease-out,
+      background-position 0.2s ease-out;
+
+    &:hover {
+      background-position: left;
+      box-shadow: $button-hover-shadow, $inner-border 3px $color-black;
+    }
+
+    &:active {
+      background-image: none;
+      background-color: $color-kraft-paper;
+      box-shadow: $button-hover-shadow, $inner-border 1px $color-black;
+    }
+  }
+}
+
+.icon-button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

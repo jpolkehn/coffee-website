@@ -1,0 +1,107 @@
+.video-container {
+  position: relative;
+
+  width: 100%;
+
+  .video {
+    display: block;
+
+    width: 100%;
+  }
+
+  .video__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    @include sectionPadding;
+  }
+
+  .play-button {
+    position: relative;
+
+    padding-bottom: 25%;
+    width: 25%;
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 300ms ease-out;
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  .paused {
+    background-color: rgba($color-white, 0.47);
+
+    transition: all 300ms ease-out;
+
+    &:hover {
+      background-color: rgba($color-white, 0.7);
+    }
+
+    // The play icon
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      // The play icon is shifted a little to the right to make it appear more
+      // centered.
+      left: 55%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+
+      width: 30%;
+      height: 35%;
+
+      background-image: url("../img/icons/icon-play.svg");
+      background-size: cover;
+    }
+  }
+
+  .playing {
+    opacity: 0%;
+
+    // The pause icon
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+
+      width: 30%;
+      height: 35%;
+
+      background-image: url("../img/icons/icon-pause.svg");
+      background-size: cover;
+    }
+  }
+
+  // Show the pause button a little when the video is moused over.
+  &:hover {
+    .playing {
+      opacity: 20%;
+
+      // Make the pause button even more visible when it is moused over.
+      &:hover {
+        opacity: 40%;
+      }
+    }
+  }
+}

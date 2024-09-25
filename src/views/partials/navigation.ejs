@@ -1,0 +1,66 @@
+<nav class="nav" id="navigation">
+  <div class="nav--regular">
+    <div class="nav__logo">
+      <a href="index.ejs" aria-describedby="logo-link-description"
+        ><img
+          src="../img/icons/Logo.svg"
+          alt="Rustica Logo"
+          class="icon logo-svg"
+      /></a>
+    </div>
+    <%- include("./nav-list.ejs") %>
+    <button
+      aria-label="Warenkorb-Knopf"
+      aria-describedby="cart-button-description"
+      class="icon-button cart-icon cart-button open-cart-button"
+    >
+      <img
+        src="../img/icons/Warenkorb.svg"
+        alt="Warenkorb Icon"
+        class="icon cart-svg"
+      />
+      <div class="cart__product-count-container">
+        <p class="cart__product-count">0</p>
+      </div>
+    </button>
+    <button
+      aria-label="Menüknopf"
+      aria-describedby="menu-button-description"
+      class="menu-button mobile-menu-button"
+      id="mobile-menu-button"
+    >
+      <img
+        src="../img/icons/Burger Menu.svg"
+        alt="Menü öffnen"
+        class="icon burger-menu-svg"
+      />
+    </button>
+    <div id="menu-button-description" class="u-hidden">
+      <p>Dieser Knopf öffnet ein modales Navigationsmenü.</p>
+    </div>
+    <div id="logo-link-description" class="u-hidden">
+      <p>Dieser Link führt zur Startseite.</p>
+    </div>
+  </div>
+  <div
+    class="overlay overlay--sliding nav--overlay"
+    role="dialog"
+    aria-label="Menü"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+    <button
+      aria-label="Menü schließen"
+      class="menu-button overlay-close-button close-menu-button u-hidden"
+      id="mobile-menu-close-button"
+    >
+      <img
+        src="../img/icons/Burger Menu close.svg"
+        alt="Menü schließen"
+        class="burger-menu-svg--close"
+      />
+    </button>
+    <%- include("./nav-list.ejs") %>
+  </div>
+</nav>
+<%- include("./cart.ejs") %>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+  <%- include("./partials/head", {title: "Startseite | Rustica Kaffeerösterei"})
+  %>
+
+  <body>
+    <header class="header header--image header--home">
+      <%- include ("./partials/navigation.ejs", {activePage: 'index'}) %>
+      <h1 class="site-heading--primary">Rustica</h1>
+      <p class="subhead-m site-heading--secondary">Bio und Fair seit 1991</p>
+      <a href="./shop.ejs" class="button button--dark header__shop-button"
+        ><p>Zum Shop</p></a
+      >
+    </header>
+
+    <main class="main index">
+      <section class="section--about" id="about">
+        <div class="text-and-images">
+          <div class="text-and-images__row text-and-images__row-pic-right">
+            <div class="text-and-images__cell text-and-images__cell--text">
+              <h2 class="text-heading--secondary">Rösterei & Café</h2>
+              <p class="text-and-images__text">
+                Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen
+                Rösterei, serviert im gemütlichen Café in der Innenstadt.
+              </p>
+              <div class="text-and-images__subrow">
+                <div class="text-and-images__subcell">
+                  <p class="text-and-images__text">
+                    Komm vorbei! <br />
+                    Fraunhoferstr. 13, Kiel
+                  </p>
+                </div>
+                <div class="text-and-images__subcell">
+                  <p class="text-and-images__text">
+                    Mo – Fr 8–18 Uhr <br />
+                    Sa 11–18 Uhr
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="text-and-images__cell text-and-images__cell--image">
+              <img
+                src="../img/FEND-Coffee-shop.jpg"
+                alt="Cafè-Inneres"
+                class="text-and-images__img"
+              />
+            </div>
+          </div>
+          <div class="text-and-images__row text-and-images__row--pic-left">
+            <div class="text-and-images__cell text-and-images__cell--text">
+              <h3 class="text-heading--tertiary">Bio und Fair</h3>
+              <p class="text-and-images__text">
+                Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+                Konsonantien leben die Blindtexte. Weit hinten, hinter den
+                Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+                Blindtexte. Und das alles in bester Bio Qualität.
+              </p>
+              <a href="./origins.ejs" class="learn-more-link">mehr</a>
+            </div>
+            <div class="text-and-images__cell text-and-images__cell--image">
+              <img
+                src="../img/FEND-coffee-plant.jpg"
+                alt="Kaffeepflanze"
+                class="text-and-images__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product-display product-display--dark" id="shop">
+        <h2>Entdecke unsere<br />Kaffeesorten</h2>
+        <div class="product-slider"></div>
+        <a
+          href="./shop.ejs"
+          class="button button--light-border product-display__button"
+        >
+          alle Produkte
+        </a>
+      </section>
+      <section class="section--origins" id="origins">
+        <h3>Herkunft</h3>
+        <p>
+          Weit hinten, hinter den Wortbergen,<br />
+          fern der Länder Vokalien und<br />
+          Konsonantien leben die Blindtexte. <br />
+          Und das alles in bester Bio Qualität.
+        </p>
+        <a href="./origins.ejs" class="learn-more-link">mehr</a>
+      </section>
+      <section class="section--contents" id="contents">
+        <h2 class="section--contents__heading">Das steckt drin</h2>
+        <div class="section--contents__container">
+          <div class="section--contents__image">
+            <img
+              src="../img/FEND_Coffee_Costa-Rica 2.png"
+              alt="Kaffee aus Costa Rica"
+            />
+          </div>
+          <div class="section--contents__text-and-button">
+            <div class="section--contents__descriptions">
+              <div class="item icon-1">
+                <img
+                  src="../img/icons/Icon Kaffee Tasse.svg"
+                  alt="Icon Kaffeetasse"
+                  class="section--content-icon"
+                />
+              </div>
+              <div class="item icon-2">
+                <img
+                  src="../img/icons/Icon Kaffee Schaufel Schwarz.svg"
+                  alt="Icon Kaffeeschaufel"
+                  class="section--content-icon"
+                />
+              </div>
+              <div class="item icon-3">
+                <img
+                  src="../img/icons/Icon-Kaffee Pflanze.svg"
+                  alt="Icon Kaffeepflanze"
+                  class="section--content-icon"
+                />
+              </div>
+              <div class="item text-1">Bester<br />Geschmack</div>
+              <div class="item text-2">Fair<br />gehandelt</div>
+              <div class="item text-3">Bio<br />Qualität</div>
+            </div>
+            <div class="section--contents__button">
+              <a href="./shop.ejs" class="button button--dark">zum Shop</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <%- include ("./partials/map.ejs") %> <%- include
+      ("./partials/footer.ejs") %>
+    </footer>
+    <script src="../js/scripts/index.js"></script>
+    <script src="../js/scripts/product-slider.js"></script>
+  </body>
+</html>

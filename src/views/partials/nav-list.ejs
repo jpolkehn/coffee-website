@@ -1,0 +1,19 @@
+<%# This template will generate the navigation list. It adds a class of 'active'
+to the navigation item matching the active page, which is passed in as an
+argument. %>
+<ul class="nav__list">
+  <!-- prettier-ignore -->
+  <% [ {name: "das Café", target: "cafe"}, 
+       {name: "Herkunft", target: "origins"},
+       {name: "Shop", target: "shop"},
+       {name: "Kontakt", target: "contact"}].forEach(function(item){ %>
+  <li
+    <%if (locals.activePage == item.target ) { %> aria-current="page" <% } %>
+    class="menu-item <%if (locals.activePage == item.target ) { 
+        %> active <% 
+    } %>"
+  >
+    <a href="<%=`${item.target}.ejs`%>" class="menu-link"><%= item.name %></a>
+  </li>
+  <% }); %>
+</ul>

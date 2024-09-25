@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+  <%- include("./partials/head", {title: "Shop | Rustica Kaffeerösterei"}) %>
+  <body>
+    <header class="header">
+      <%- include ("./partials/navigation.ejs", {activePage: 'shop'}) %>
+    </header>
+    <main class="main shop">
+      <div class="product-display product-display--light"></div>
+      <!-- Parcel doesn't seem to want to include the product page 
+      if I don't link to it statically somewhere, so... if there's another
+      way, I'll use that. -->
+      <a href="./product.ejs" style="display: none"></a>
+    </main>
+    <footer class="footer">
+      <%- include ("./partials/map.ejs") %> <%- include
+      ("./partials/footer.ejs") %>
+    </footer>
+    <script src="../js/scripts/shop.js"></script>
+    <script src="../js/scripts/index.js"></script>
+  </body>
+</html>

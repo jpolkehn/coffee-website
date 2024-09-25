@@ -1,0 +1,64 @@
+.header--image {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 75vh;
+  min-height: 300px;
+
+  background-position: center;
+  background-size: cover;
+
+  @include respond(media-lg) {
+    height: 65vh;
+  }
+}
+
+// TODO: Add more image sizes
+.header--home {
+  @include bgImageWithOverlay(
+    "../img/FEND-Coffee-latte-art-3.jpg",
+    $overlay-dark-weak
+  );
+
+  @include respond(media-lg) {
+    @include bgImageWithOverlay(
+      "../img/FEND-Coffee-latte-art-3-lg.jpg",
+      $overlay-dark-weak
+    );
+  }
+
+  .header__shop-button {
+    position: absolute;
+    bottom: 10%; // TODO: Exact position?
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.header--cafe {
+  @include bgImageWithOverlay(
+    "../img/FEND-Coffee-shop.jpg",
+    $overlay-dark-weak
+  );
+}
+
+// NOTE: There's no overlay in the Figma design right now,
+// but the nav bar is a little difficult to read without it.
+.header--origins {
+  @include bgImageWithOverlay(
+    "../img/FEND-Coffee-beans-hand-2.jpg",
+    $overlay-dark-weak
+  );
+
+  @include respond(media-lg) {
+    @include bgImageWithOverlay(
+      "../img/FEND-Coffee-beans-hand-2.jpg",
+      $overlay-dark-weak
+    );
+  }
+}

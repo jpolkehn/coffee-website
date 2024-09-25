@@ -1,0 +1,40 @@
+.cafe {
+  // TODO: The order of images is wrong. There are other approaches
+  // in other branches that fix the image order, but they have layout problems.
+  .gallery {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+
+    padding-top: 0;
+    width: 100%;
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      width: 50%;
+
+      @include respond(media-lg) {
+        flex-direction: row;
+      }
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      width: 100%;
+
+      @include respond(media-lg) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

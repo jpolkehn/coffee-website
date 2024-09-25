@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <%- include("./partials/head", {title: "Herkunft | Rustica Kaffeerösterei"})
+  %>
+  <body>
+    <header class="header header--image header--origins">
+      <%- include("./partials/navigation", {activePage: "origins"}) %>
+    </header>
+    <main class="origins">
+      <div class="origins__overview">
+        <h2 class="text-heading--secondary">Der Ursprung von Rustica</h2>
+        <p>
+          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+          Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
+          Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+          Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt
+          sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in
+          dem einem gebratene Satzteile in den Mund fliegen.Nicht einmal von der
+          allmächtigen Interpunktion werden die Blindtexte beherrscht – ein
+          geradezu unorthographisches Leben.
+        </p>
+      </div>
+
+      <div class="origins__video">
+        <!-- prettier-ignore -->
+        <%- include ("./partials/simple-video.ejs", { 
+        video: {
+          sources: [ 
+            {path: "../img/close-up-of-dark-roasted.webm", type: "video/webm"}, 
+            {path: "../img/close-up-of-dark-roasted.mp4", type:"video/mp4"}
+          ],
+          description: "Stummes Video von Kaffeebohnen und Schokolade auf einem rotierenden Tisch"
+        }
+      }) %>
+      </div>
+
+      <div class="text-and-images">
+        <div class="text-and-images__row text-and-images__row--pic-right">
+          <div class="text-and-images__cell text-and-images__cell--text">
+            <h3 class="text-heading--tertiary">Die Anbaugebiete</h3>
+            <p class="text-and-images__text">
+              Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+              Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
+              Buchstabhausen an der Küste des Semantik, eines großen
+              Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren
+              Ort und versorgt sie mit den nötigen Regelialien. Es ist ein
+              paradiesmatisches Land, in dem einem gebratene Satzteile in den
+              Mund fliegen.Nicht einmal von der allmächtigen Interpunktion
+              werden die Blindtexte beherrscht – ein geradezu unorthographisches
+              Leben.
+            </p>
+          </div>
+          <div class="text-and-images__cell text-and-images__cell--image">
+            <img
+              src="../img/FEND-coffee-plant-2.jpg"
+              alt="Kaffeepflanze"
+              class="text-and-images__img"
+            />
+          </div>
+        </div>
+
+        <div class="text-and-images__row text-and-images__row--pic-left">
+          <div class="text-and-images__cell text-and-images__cell--text">
+            <h3 class="text-heading--tertiary">Das Wohl der Kaffeebauern</h3>
+            <p class="text-and-images__text">
+              Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+              Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
+              Buchstabhausen an der Küste des Semantik, eines großen
+              Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren
+              Ort und versorgt sie mit den nötigen Regelialien. Es ist ein
+              paradiesmatisches Land, in dem einem gebratene Satzteile in den
+              Mund fliegen.Nicht einmal von der allmächtigen Interpunktion
+              werden die Blindtexte beherrscht – ein geradezu unorthographisches
+              Leben.
+            </p>
+          </div>
+          <div class="text-and-images__cell text-and-images__cell--image">
+            <img
+              src="../img/FEND-Coffee-worker.jpg"
+              alt="Kaffeepflanze"
+              class="text-and-images__img"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer"><%- include("./partials/footer") %></footer>
+    <script src="../js/scripts/index.js"></script>
+    <script src="../js/scripts/simple-video.js"></script>
+  </body>
+</html>

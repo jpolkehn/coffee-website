@@ -1,0 +1,215 @@
+.cart {
+  background-color: $color-white;
+
+  * {
+    color: $color-black;
+  }
+
+  .close-cart-button {
+    filter: brightness(0);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include standardPagePadding;
+    min-height: 100%;
+
+    .cart__header {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include respond(media-lg) {
+        @include sectionPaddingSides;
+      }
+
+      .cart__title-and-count {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 2rem;
+
+        margin-bottom: 2rem;
+        @include sectionPaddingSides;
+
+        @include respond(media-lg) {
+          column-gap: 5rem;
+
+          padding-left: 0;
+          padding-right: 0;
+        }
+        @include respond(media-xl) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        @include respond(media-xxl) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .add-message {
+        width: 100vw;
+
+        background-color: $color-kraft-paper;
+
+        padding: 2rem 3.6rem;
+
+        @include respond(media-lg) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__product-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    flex-grow: 1;
+  }
+
+  &__item {
+    &__content {
+      display: flex;
+      height: min-content;
+
+      .coffee-img {
+        height: 12.5rem;
+
+        @include respond(media-md) {
+          height: 25rem;
+        }
+
+        @include respond(media-lg) {
+          height: 30rem;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .coffee-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+
+        @include respond(media-lg) {
+          padding-top: 2rem;
+          padding-bottom: 3rem;
+        }
+
+        .name-and-price-row {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .coffee-name {
+            font-weight: 700;
+          }
+        }
+
+        .product-link {
+          text-decoration: none;
+          color: $color-black;
+          @include hoverUnderline;
+          width: fit-content;
+        }
+
+        .button-container {
+          display: flex;
+          justify-content: space-between;
+
+          .amount-container {
+            display: flex;
+            column-gap: 5px;
+            align-items: center;
+
+            .product-button--increase-amount,
+            .product-button--decrease-amount {
+              font-size: 4rem;
+              line-height: 0.7;
+              margin-bottom: 4px;
+              color: $color-icon-grey;
+            }
+
+            .amount-input {
+              height: 50%;
+
+              @include respond(media-lg) {
+                height: 70%;
+              }
+            }
+          }
+
+          .product-button--delete {
+            img {
+              filter: brightness(0);
+              width: 70%;
+
+              @include respond(media-lg) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__billing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    @include sectionPadding;
+
+    background-color: $color-anthracite;
+
+    * {
+      color: $color-white;
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: none;
+      border-top: solid 1px $color-white;
+    }
+  }
+
+  .amount-input {
+    width: fit-content;
+    &--invalid {
+      background-color: $color-invalid;
+    }
+  }
+
+  .checkout-button {
+    margin-top: 2.5rem;
+
+    color: $color-black;
+
+    background-color: $color-kraft-paper;
+
+    &:hover,
+    &:focus {
+      background-color: $color-light-grey;
+    }
+
+    &:active {
+      background-color: $color-white;
+    }
+  }
+}

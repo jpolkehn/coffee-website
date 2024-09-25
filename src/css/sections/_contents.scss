@@ -1,0 +1,114 @@
+.section--contents {
+  &__heading {
+    margin-bottom: 5rem;
+
+    text-align: center;
+
+    @include respond(media-lg) {
+      margin-bottom: 12rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    @include respond(media-lg) {
+      flex-direction: row;
+
+      margin: 0 auto;
+      width: 75%;
+    }
+  }
+
+  &__image {
+    margin-bottom: 5rem;
+    width: 50vw;
+
+    img {
+      width: 100%;
+    }
+
+    @include respond(media-lg) {
+      margin-bottom: 0;
+      width: 40vw;
+    }
+  }
+
+  &__text-and-button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    @include respond(media-lg) {
+      align-items: flex-start;
+
+      width: fit-content;
+    }
+  }
+
+  &__descriptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+
+    margin-bottom: 4rem;
+    width: 100%;
+
+    text-align: center;
+
+    @include respond(media-lg) {
+      grid-template-columns: [icon-start] auto [icon-end label-start] auto [label-end];
+      grid-template-rows: repeat(3, [row-start] 1fr [row-end]);
+      row-gap: 10rem;
+      column-gap: 3rem;
+
+      margin-bottom: 8rem;
+
+      text-align: left;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include respond(media-lg) {
+      .text-1 {
+        grid-area: row-start 1 / label-start / row-end 1 / label-end;
+      }
+
+      .text-2 {
+        grid-area: row-start 2 / label-start / row-end 2 / label-end;
+      }
+
+      .text-3 {
+        grid-area: row-start 3 / label-start / row-end 3 / label-end;
+      }
+
+      .icon-1 {
+        grid-area: row-start 1 / icon-start / row-end 1 / icon-end;
+      }
+
+      .icon-2 {
+        grid-area: row-start 2 / icon-start / row-end 2 / icon-end;
+      }
+
+      .icon-3 {
+        grid-area: row-start 3 / icon-start / row-end 3 / icon-end;
+      }
+    }
+  }
+
+  &__button {
+    flex-basis: content;
+  }
+}

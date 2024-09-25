@@ -1,0 +1,36 @@
+// Default typography styles
+* {
+  font-family: Roboto, sans-serif;
+  line-height: 1.3;
+  @include bodyText;
+}
+
+// Heading typography styles
+
+h1 {
+  @include headingLevel1;
+}
+
+h2 {
+  @include headingLevel2;
+}
+
+h3 {
+  @include headingLevel3;
+}
+
+.subhead-m {
+  font-size: 1.8rem;
+
+  @include respond(media-xxl) {
+    font-size: 2.4rem;
+  }
+}
+
+.site-heading--primary {
+  color: $color-white;
+}
+
+.site-heading--secondary {
+  color: $color-white;
+}

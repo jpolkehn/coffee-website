@@ -1,0 +1,35 @@
+.origins {
+  @include standardPagePadding;
+
+  .text-and-images {
+    &__cell--image {
+      @include sectionPaddingTop;
+    }
+
+    &__cell--text {
+      margin: 0;
+      padding-top: 0;
+    }
+
+    &__row {
+      &--pic-left {
+        .text-and-images__cell--image {
+          padding-left: 50px;
+          @include respond(media-lg) {
+            padding-left: 8rem;
+          }
+        }
+      }
+
+      &--pic-right {
+        .text-and-images__cell--image {
+          padding-right: 50px;
+
+          @include respond(media-lg) {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<div
+  class="overlay overlay--sliding cart cart-overlay"
+  role="dialog"
+  aria-label="Warenkorb"
+  aria-modal="true"
+  aria-hidden="true"
+>
+  <button
+    aria-label="Warenkorb schließen"
+    class="cart-button icon-button overlay-close-button close-cart-button u-hidden"
+  >
+    <img
+      src="../img/icons/Burger Menu close.svg"
+      alt="Warenkorb schließen"
+      class="burger-menu-svg--close"
+    />
+  </button>
+  <div class="cart__content">
+    <div class="cart__header">
+      <div class="cart__title-and-count">
+        <h3>Warenkorb</h3>
+        <p>
+          <span class="cart__product-count">0</span>
+          <span class="cart__product-count-label">Produkte</span>
+        </p>
+      </div>
+      <p class="add-message"></p>
+    </div>
+    <div class="cart__product-list"></div>
+    <div class="cart__billing">
+      <div class="cart__billing__row--price-sum">
+        <p>Zwischensumme</p>
+        <p class="price-sum">0,00€</p>
+      </div>
+      <div class="cart__billing__row--shipping">
+        <p>Versandkosten</p>
+        <p class="shipping">0,00€</p>
+      </div>
+      <hr class="cart__billing__row--divider" />
+      <div class="cart__billing__row--total">
+        <p>Gesamtbetrag</p>
+        <p class="total">0,00€</p>
+      </div>
+      <a href="#" class="button button--dark button--centered checkout-button">
+        zur Kasse
+      </a>
+    </div>
+  </div>
+</div>

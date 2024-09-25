@@ -1,0 +1,39 @@
+.section--origins {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+
+  height: 50vh;
+  min-height: 250px;
+
+  @include bgImageWithOverlay(
+    "../img/FEND-Coffee-bags-2.jpg",
+    $overlay-dark-strong
+  );
+
+  @include respond(media-lg) {
+    @include bgImageWithOverlay(
+      "../img/FEND-Coffee-bags-2-lg.jpg",
+      $overlay-dark-strong
+    );
+  }
+
+  background-position: center;
+  background-size: cover;
+  p,
+  h3,
+  a {
+    text-align: center;
+    color: $color-white;
+    margin-top: 3.5rem;
+  }
+
+  .learn-more-link {
+    @include underlineStyle {
+      background-color: $color-white;
+    }
+  }
+}

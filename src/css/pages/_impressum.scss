@@ -1,0 +1,56 @@
+.impressum {
+  display: flex;
+  justify-content: center;
+
+  @include sectionPadding;
+
+  h2 {
+    margin-top: 2rem;
+
+    @include respond(media-lg) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__text {
+    width: 100%;
+
+    @include respond(media-lg) {
+      width: 75%;
+    }
+  }
+
+  &__address-heading {
+    margin-bottom: 1rem;
+
+    @include respond(media-lg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  p,
+  address {
+    margin-bottom: 2rem;
+
+    @include respond(media-lg) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style-type: "- ";
+
+    li {
+      margin-bottom: 1.5rem;
+
+      @include respond(media-lg) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

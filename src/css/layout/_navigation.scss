@@ -1,0 +1,241 @@
+.nav {
+  position: fixed;
+  z-index: 10;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  width: 100vw;
+  padding: 1rem 6.5%;
+
+  // Gradient to slide up and down to toggle white and transparent backgrounds.
+  background-image: linear-gradient(
+    to bottom,
+    $color-white 50%,
+    transparent 50%
+  );
+  background-size: 100% 200%;
+  background-position: bottom;
+
+  // Gently transition between the transparent and solid nav bar.
+  transition: all 0.3s ease-out;
+
+  @include respond(media-xxl) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__logo {
+    img {
+      display: block;
+    }
+  }
+
+  // nav typography styles
+
+  .menu-link {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    @include respond(media-xxl) {
+      font-size: 2.4rem;
+    }
+
+    @include hoverUnderline;
+  }
+
+  .active {
+    .menu-link {
+      // The active page is underlined.
+      @include underlineStyle {
+        width: 100%;
+      }
+    }
+  }
+
+  .menu-button {
+    border: none;
+
+    background-color: transparent;
+  }
+
+  .mobile-menu-button {
+    width: 3rem;
+
+    @include respond($nav-bar-breakpoint) {
+      display: none;
+    }
+  }
+
+  // When the page is not scrolled, the nav bar is transparent with
+  // white text.
+  &--transparent {
+    .menu-link,
+    p {
+      color: $color-white;
+
+      // Set the color of the marker underline to white.
+      @include underlineStyle {
+        background-color: $color-white;
+      }
+    }
+
+    .icon {
+      filter: brightness(1000);
+    }
+
+    .cart__product-count--nonempty {
+      .cart__product-count {
+        color: $color-black;
+      }
+      background-color: $color-white;
+    }
+  }
+
+  // When the page is scrolled down, the nav bar is white with black text.
+  &--solid {
+    background-position: top;
+    .menu-link {
+      color: $color-black;
+    }
+
+    .icon {
+      filter: brightness(0);
+    }
+
+    .cart__product-count--nonempty {
+      background-color: $color-petrol;
+    }
+  }
+
+  // Styles for the navigation bar visible when the overlay is closed.
+  &--regular {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+
+    .logo-svg {
+      height: 3.5rem;
+      width: 3.5rem;
+
+      @include respond(media-xxl) {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+
+    .nav__list {
+      display: none;
+
+      @include respond($nav-bar-breakpoint) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+
+        margin-left: auto;
+
+        .menu-item {
+          margin-left: 6.6rem;
+        }
+      }
+    }
+
+    .cart-icon {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+
+      margin-left: auto;
+      margin-right: 2rem;
+
+      img {
+        padding-bottom: 5px;
+      }
+
+      &:hover .cart__product-count--nonempty {
+        transform: scale(1.15);
+      }
+
+      @include respond($nav-bar-breakpoint) {
+        column-gap: 8px;
+
+        margin-left: 6.6rem;
+        margin-right: 0;
+        img {
+          padding-bottom: 0;
+        }
+      }
+      .cart__product-count-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 8px;
+
+        width: fit-content;
+
+        margin-left: -1.2rem;
+        margin-top: -1rem;
+        z-index: 2;
+      }
+
+      .cart__product-count--empty {
+        display: none;
+      }
+
+      .cart__product-count--nonempty {
+        border-radius: 50%;
+
+        text-align: center;
+        vertical-align: middle;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+
+  // Styles for the navigation overlay
+  &--overlay {
+    background-color: $color-black;
+
+    .nav__list {
+      position: absolute;
+      left: 15%;
+      // Center vertically
+      top: 50%;
+      transform: translateY(Max(-50%, -50vh));
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+
+      padding: 8rem 0;
+
+      .menu-link {
+        @include headingLevel3;
+
+        color: $color-white;
+
+        // Set the color of the marker underline to white
+        @include underlineStyle {
+          background-color: $color-white;
+          height: 3px;
+        }
+      }
+    }
+  }
+}
+
+// General styles for the actual list of links.
+.nav__list {
+  list-style-type: none;
+
+  .menu-link {
+    text-decoration: none;
+  }
+}

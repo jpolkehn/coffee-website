@@ -1,0 +1,23 @@
+.map {
+  padding: 0;
+  &__heading {
+    margin: 3.5rem $padding-media-sm-horizontal;
+    @include respond(media-xl) {
+      margin-right: $padding-media-xl-horizontal;
+      margin-left: $padding-media-xl-horizontal;
+    }
+  }
+
+  &__frame {
+    // Remove space under the map
+    display: block;
+
+    border: none;
+    height: 35vh;
+    width: 100%;
+
+    @include respond(media-lg) {
+      height: 45vh;
+    }
+  }
+}

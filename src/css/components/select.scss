@@ -1,0 +1,63 @@
+.select-container {
+  .select-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 2rem 0 2.5rem;
+    height: 100%;
+
+    background-color: $color-black;
+
+    // Allow a click on this container to open the select element
+    pointer-events: none;
+
+    &::after {
+      content: "›";
+
+      transform: rotate(90deg);
+
+      font-size: 4rem;
+      color: $color-white;
+    }
+  }
+
+  position: relative;
+  select {
+    appearance: none;
+
+    border-radius: 5px;
+    width: 100%;
+
+    color: $color-white;
+
+    background-color: $color-black;
+
+    @include respond(media-lg) {
+      border: solid 2px $color-black;
+
+      color: $color-black;
+
+      background-color: $color-white;
+    }
+
+    option {
+      color: $color-black;
+
+      background-color: $color-white;
+    }
+  }
+
+  // Changes the arrow direction when the select element receives focus.
+  // Not ideal because it applies whenever it has focus, not just when
+  // the options are open.
+  select:focus + .select-arrow::after {
+    content: "‹";
+  }
+}

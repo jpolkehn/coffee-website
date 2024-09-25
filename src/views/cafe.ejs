@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+  <%- include("./partials/head", {title: "das Café | Rustica Kaffeerösterei"})
+  %>
+  <body>
+    <header class="header header--image header--cafe">
+      <h1 class="u-sr-only">Das Café</h1>
+      <%- include ("./partials/navigation.ejs", {activePage: "cafe"}) %>
+    </header>
+    <main class="main cafe">
+      <section class="text-and-images">
+        <div class="text-and-images__row text-and-images__row-pic-right">
+          <div class="text-and-images__cell text-and-images__cell--text">
+            <h2 class="text-heading--secondary">Rösterei & Café</h2>
+            <p class="text-and-images__text">
+              Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen
+              Rösterei, serviert im gemütlichen Café in der Innenstadt.
+            </p>
+            <div class="text-and-images__subrow">
+              <div class="text-and-images__subcell">
+                <p class="text-and-images__text">
+                  Komm vorbei! <br />
+                  Fraunhoferstr. 13, Kiel
+                </p>
+              </div>
+              <div class="text-and-images__subcell">
+                <p class="text-and-images__text">
+                  Mo – Fr 8–18 Uhr <br />
+                  Sa 11–18 Uhr
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-and-images__cell text-and-images__cell--image">
+            <img
+              src="../img/FEND-Coffee-machine-2.jpg"
+              alt="Cafè-Inneres"
+              class="text-and-images__img"
+            />
+          </div>
+        </div>
+        <div class="text-and-images__row text-and-images__row--single-cell">
+          <div class="text-and-images__cell text-and-images__cell--text">
+            <h3 class="text-heading--tertiary">Frisches Gebäck von nebenan</h3>
+            <p class="text-and-images__text">
+              Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf
+              es einen letzten Blick zurück auf die Skyline seiner Heimatstadt
+              Buchstabhausen, die Headline von Alphabetdorf. Wehmütig lief ihm
+              eine rhetorische Frage über die Wange, dann setzte es seinen Weg
+              fort. Unterwegs traf es eine Copy. Die Copy warnte das
+              Blindtextchen, da, wo sie herkäme wäre sie zigmal umgeschrieben
+              worden und alles, was von ihrem Ursprung noch übrig wäre, sei das
+              Wort "und" und das Blindtextchen solle umkehren und wieder in sein
+              eigenes, sicheres Land zurückkehren.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <!-- prettier-ignore -->
+        <div class="gallery__block">
+          <div class="gallery__column">
+            <img src="../img/FEND-danish 1.jpg" alt="Dänisches Gebäck">
+            <img src="../img/FEND-Coffee-sign.jpg" alt="">
+          </div>
+          <div class="gallery__column">
+            <img src="../img/FEND-Coffee-latte-art-2.jpg" alt="Dänisches Gebäck">
+            <img src="../img/FEND-Coffee-latte-art-3.jpg" alt="">
+          </div>
+        </div>
+        <div class="gallery__block">
+          <div class="gallery__column">
+            <img src="../img/FEND-coffee-machine.jpg" alt="Dänisches Gebäck" />
+            <img src="../img/FEND-Coffee-latte-art.jpg" alt="" />
+          </div>
+          <div class="gallery__column">
+            <img src="../img/FEND-coffee-list.jpg" alt="Dänisches Gebäck" />
+            <img src="../img/FEND-coffee-breakfast 1.jpg" alt="" />
+          </div>
+        </div>
+        <%#- include("./partials/image-grid.ejs", {gridImages: [ {src:
+        "FEND-danish 1", alt: "Dänisches Gebäck", id: "danish"}, {src:
+        "FEND-Coffee-latte-art-2", alt: "Vier Tassen Kaffee mit Kaffeekunst",
+        id: "latte-art-2"}, {src: "FEND-coffee-machine", alt: "Kaffeemaschine",
+        id: "coffee-machine"}, {src: "FEND-coffee-list", alt: "Menü", id:
+        "coffee-list"}, {src: "FEND-Coffee-sign", alt: "Dekoratives Schild", id:
+        "sign"}, { src: "FEND-Coffee-latte-art-3", alt: "Zwei Kaffeetassen und
+        ein Colaglas, mit denen angestoßen wird", id: "latte-art-3" }, {src:
+        "FEND-Coffee-latte-art", alt: "Kaffeekunst", id: "latte-art"}, {src:
+        "FEND-coffee-breakfast 1", alt: "Frühstück mit Kaffee", id: "breakfast"}
+        ] }) #%>
+      </section>
+    </main>
+    <footer class="footer">
+      <%- include ("./partials/map.ejs") %> <%- include
+      ("./partials/footer.ejs") %>
+    </footer>
+    <script src="../js/scripts/index.js"></script>
+  </body>
+</html>

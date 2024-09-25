@@ -1,0 +1,133 @@
+@import "../abstracts/animations";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.slider {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4rem;
+
+  &__elem {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+
+    display: inline-block;
+
+    width: 100%;
+  }
+
+  // Animation classes
+  .active {
+    position: initial;
+
+    &--from-right {
+      animation-name: slideFromRight;
+      animation-duration: 600ms;
+      animation-timing-function: ease-out;
+    }
+
+    &--from-left {
+      animation-name: slideFromLeft;
+      animation-duration: 600ms;
+      animation-timing-function: ease-out;
+    }
+  }
+
+  .left {
+    left: 0;
+    transform: translateX(-100vw);
+
+    animation-name: slideToLeft;
+    animation-duration: 600ms;
+    animation-timing-function: ease-out;
+  }
+
+  .right {
+    left: 0;
+    transform: translateX(100vw);
+
+    animation-name: slideToRight;
+    animation-duration: 600ms;
+    animation-timing-function: ease-out;
+  }
+
+  // Tab indicators
+  .tab-dots {
+    display: flex;
+    column-gap: 5px;
+
+    .tab-dot {
+      border: none;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+
+      cursor: pointer;
+
+      background-color: $color-anthracite-light;
+
+      transition: background-color 300ms ease-out;
+
+      &--active {
+        background-color: $color-medium-grey;
+      }
+    }
+  }
+
+  // Forwards and backwards buttons
+  &__button {
+    display: none;
+
+    @include respond(media-xl) {
+      position: absolute;
+      top: 30%;
+      transform: translateY(-50%);
+
+      display: inline-block;
+
+      border: none;
+
+      background-color: transparent;
+
+      text-decoration: none;
+      font-size: 10rem;
+
+      &--left {
+        left: -7rem;
+      }
+
+      &--right {
+        right: -7rem;
+      }
+    }
+
+    &--active {
+      cursor: pointer;
+
+      opacity: 50%;
+      transition: opacity 300ms ease-out;
+
+      &:hover {
+        opacity: 80%;
+      }
+
+      &:active {
+        opacity: 100%;
+      }
+    }
+
+    &--inactive {
+      opacity: 20%;
+
+      // The button has no effect in this state and has a negative tabindex,
+      // but still has an outline when clicked, so this removes that.
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

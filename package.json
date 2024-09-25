@@ -1,0 +1,35 @@
+{
+  "name": "postcss-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/views/index.ejs",
+    "build": "parcel build src/views/index.ejs",
+    "lint": "eslint src/js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "autoprefixer": "9.8.6",
+    "babel-eslint": "^10.1.0",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "parcel-bundler": "1.12.4",
+    "postcss": "7.0.35",
+    "postcss-custom-properties": "^10.0.0",
+    "postcss-nested": "4.2.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.0"
+  },
+  "dependencies": {
+    "parcel-plugin-ejs-template": "^0.2.0"
+  },
+  "resolutions": {
+    "node-forge": "^0.10.0"
+  }
+}

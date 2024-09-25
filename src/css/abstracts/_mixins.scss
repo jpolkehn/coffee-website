@@ -1,0 +1,298 @@
+// TYPOGRAPHY
+
+// Style elements common to all headings
+@mixin headingGeneralStyle {
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+@mixin bodyText {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  strong,
+  b {
+    font-weight: 900;
+  }
+
+  @include respond(media-md) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(media-xl) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(media-xxl) {
+    font-size: 2rem;
+  }
+}
+
+@mixin headingLevel1 {
+  @include headingGeneralStyle;
+
+  font-size: 6.4rem;
+
+  @include respond(media-md) {
+    font-size: 7.4rem;
+  }
+
+  @include respond(media-lg) {
+    font-size: 8.2rem;
+  }
+
+  @include respond(media-xl) {
+    font-size: 9.6rem;
+  }
+
+  @include respond(media-xxl) {
+    font-size: 12rem;
+  }
+}
+
+@mixin headingLevel2 {
+  @include headingGeneralStyle;
+
+  font-size: 3.6rem;
+
+  @include respond(media-md) {
+    font-size: 4rem;
+  }
+
+  @include respond(media-lg) {
+    font-size: 4.4rem;
+  }
+
+  @include respond(media-xl) {
+    font-size: 4.8rem;
+  }
+
+  @include respond(media-xxl) {
+    font-size: 6rem;
+  }
+}
+
+@mixin headingLevel3 {
+  @include headingGeneralStyle;
+
+  font-size: 3.2rem;
+
+  @include respond(media-md) {
+    font-size: 3.6rem;
+  }
+
+  @include respond(media-lg) {
+    font-size: 4rem;
+  }
+
+  @include respond(media-xl) {
+    font-size: 4.2rem;
+  }
+
+  @include respond(media-xl) {
+    font-size: 5rem;
+  }
+}
+
+// PADDING
+
+@mixin sectionPaddingSides {
+  padding-left: $padding-media-sm-horizontal;
+  padding-right: $padding-media-sm-horizontal;
+
+  @include respond(media-md) {
+    padding-left: $padding-media-md-horizontal;
+    padding-right: $padding-media-md-horizontal;
+  }
+
+  @include respond(media-lg) {
+    padding-left: $padding-media-lg-horizontal;
+    padding-right: $padding-media-lg-horizontal;
+  }
+
+  @include respond(media-xl) {
+    padding-left: $padding-media-xl-horizontal;
+    padding-right: $padding-media-xl-horizontal;
+  }
+}
+
+@mixin sectionPaddingTop {
+  padding-top: $padding-media-sm-vertical;
+
+  @include respond(media-md) {
+    padding-top: $padding-media-md-vertical;
+  }
+
+  @include respond(media-lg) {
+    padding-top: $padding-media-lg-vertical;
+  }
+
+  @include respond(media-xl) {
+    padding-top: $padding-media-xl-vertical;
+  }
+}
+
+@mixin sectionPaddingBottom {
+  padding-bottom: $padding-media-sm-vertical;
+
+  @include respond(media-md) {
+    padding-bottom: $padding-media-md-vertical;
+  }
+
+  @include respond(media-lg) {
+    padding-bottom: $padding-media-lg-vertical;
+  }
+
+  @include respond(media-xl) {
+    padding-bottom: $padding-media-xl-vertical;
+  }
+}
+
+@mixin sectionPaddingSidesAndBottom {
+  @include sectionPaddingSides;
+  @include sectionPaddingBottom;
+}
+
+@mixin sectionPadding {
+  @include sectionPaddingSidesAndBottom;
+  @include sectionPaddingTop;
+}
+
+@mixin standardPagePadding {
+  > * {
+    @include sectionPaddingSidesAndBottom;
+  }
+
+  > *:first-child {
+    @include sectionPaddingTop;
+  }
+}
+
+// LINKS
+
+// Underline on hover (black by default)
+@mixin hoverUnderline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 1px;
+    width: 0;
+
+    background-color: $color-black;
+
+    transition: width 0.3s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// Like hoverUnderline, but the underline is applied to the hovered element's
+// direct children.
+@mixin hoverUnderlineChildren {
+  text-decoration: none;
+
+  > * {
+    position: relative;
+  }
+
+  > *::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 1px;
+    width: 0;
+
+    background-color: $color-black;
+
+    transition: width 0.3s ease-out;
+  }
+
+  &:hover {
+    > *::after {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    > *::after {
+      width: 100%;
+    }
+  }
+}
+
+@mixin underlineStyle {
+  &::after {
+    @content;
+  }
+}
+
+// MEDIA QUERIES
+
+/*
+Creates a media query for the specified device.
+Possible argument values:
+- media-sm:      screen width >= 576px (36em)
+- media-md: screen width >= 768px (48em)
+- media-lg: screen width >= 992px
+- media-xl:     screen width >= 1200px
+- media-xxl: screen width >= 1920px
+
+Units are given in em.
+1em = 16px
+*/
+@mixin respond($size) {
+  @if $size == media-sm {
+    @media (min-width: 36em) {
+      @content;
+    }
+  }
+  @if $size == media-md {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+  @if $size == media-lg {
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+  @if $size == media-xl {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $size == media-xxl {
+    @media (min-width: 120em) {
+      @content;
+    }
+  }
+}
+
+// BACKGROUND
+
+/*
+Takes a url to an image as an argument and sets the background
+image to that image with an added semi-transparent dark overlay.
+*/
+@mixin bgImageWithOverlay($imgUrl, $color) {
+  background-image: linear-gradient($color, $color), url($imgUrl);
+}
